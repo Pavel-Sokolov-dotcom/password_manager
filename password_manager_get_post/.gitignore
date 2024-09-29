@@ -1,0 +1,8 @@
+zametki.txt
+venv/
+.env
+*.pyc
+__pycache__/
+.DS_Storegi
+.idea
+.DS_Store
