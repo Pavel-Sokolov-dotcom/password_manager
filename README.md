@@ -9,18 +9,18 @@
 6. Соблюдать единый code-style на протяжении всего проекта
 7. Покрыть код тестами API:
 
-POST /password/{service_name} - создаем пароль/заменяем существующий пароль
+POST /password/{service_name} - создаем пароль/заменяем существующий пароль.
 
-GET /password/{service_name} - получить пароль по имени сервиса - провести поиск по part_of_service_name и выдать пароли с подходящими service_name
+GET /password/{service_name} - получить пароль по имени сервиса.
 
-GET /password/?service_name={part_of_service_name}
+GET /password/?service_name={part_of_service_name} - провести поиск по part_of_service_name и выдать пароли с подходящими service_name.
 
 Пример работы:
 1. Клиент делает запрос на создание пароля.
 
 Запрос:
-POST /password/yundex HTTP/1.1
-
+POST /password/yundex 
+HTTP/1.1
 content-type: application/json
 {
     "password": "very_secret_pass"
