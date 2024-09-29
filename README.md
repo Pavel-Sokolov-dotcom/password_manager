@@ -140,4 +140,5 @@ content-type: application/json
 В ответ на http://localhost:8000/api/password/?service_name=yun программа выводит зашифрованный пароль.
 
 В файле password_manager_get_post/accounts_passwords/tests.py не работают тесты.
+
 Со временем доделаю эти два пункта.
