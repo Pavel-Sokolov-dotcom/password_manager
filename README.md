@@ -22,9 +22,9 @@ GET `/password/?service_name={part_of_service_name}` - провести поис
 POST `/password/yundex`
 HTTP/1.1
 content-type: application/json
-```{
+{
     "password": "very_secret_pass"
-}```
+}
 
 Ответ:
 
@@ -55,12 +55,10 @@ accept: application/json
 HTTP/1.1 200 OK
 content-type: application/json
 `[
-
 { 
     "password": "very_secret_pass",
     "service_name": "yundex"
-}
-
+}  
 ]`
 
 Всё, что не указано в задании, опционально.
@@ -73,7 +71,7 @@ content-type: application/json
 ### 1. Клонируйте репозиторий: `git clone git@github.com:Pavel-Sokolov-dotcom/password_manager.git`
 
 ### 2. Создайте файл .env заполните его своими данными. Образец заполнения:
-`SECRET_KEY = 'ваш секретный ключ для Django'
+`SECRET_KEY = 'ваш секретный ключ для Django'`
 `DEBUG = True`
 
 `FERNET_KEY=ваш_ключ_для_кодирования_пароля`
@@ -85,6 +83,7 @@ __________________________________________
 `from cryptography.fernet import Fernet`
 
 `key = Fernet.generate_key()`
+
 `print(key.decode())`
 
 >>выдаст ключ
