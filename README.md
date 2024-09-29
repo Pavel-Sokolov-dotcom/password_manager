@@ -136,7 +136,7 @@ content-type: application/json
 }
 
 ### 7. На данный момент задание выполнено на 80%
-Пароли записываются, шифруются при запросах POST/GET для http://localhost:8000/api/password/yundex/
+Пароли записываются и шифруются при запросах POST/GET для http://localhost:8000/api/password/yundex/
 В ответ на http://localhost:8000/api/password/?service_name=yun программа выводит зашифрованный пароль.
 
 В файле password_manager_get_post/accounts_passwords/tests.py не работают тесты.
