@@ -119,6 +119,7 @@ docker-compose up --build
 
 ### 5. При первом запуске проекта вам нужно создать и применить миграции для вашей БД, выполните эти команды для Docker Compose:
 docker-compose exec password_manager_get_post python manage.py makemigrations
+
 docker-compose exec password_manager_get_post python manage.py migrate
 
 ### 6. Откройте программу Postman. Выберете отправку POST-запроса
