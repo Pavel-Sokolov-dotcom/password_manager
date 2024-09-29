@@ -90,38 +90,43 @@ __________________________________________
 >>выдаст ключ
 4) копируете ключ, возвращаетесь в ту IDE, в которой у вас файл с переменными окружения (.env)
 5) вставляете ключ в переменную FERNET_KEY без кавычек. Должно получиться что-то такое:
+
 `FERNET_KEY=RbYU0zOD9RXSV-Irkss8q0bRu-JOv2xH6UAq6K8GF_4=`
 __________________________________________
 
 Далее в файле .env заполняете данные БД, я использовал PostgreSQL.
 
-DB_NAME=name_of_your_bd
+`DB_NAME=name_of_your_bd`
 
-DB_USER=your_user_for_bd
+`DB_USER=your_user_for_bd`
 
-DB_PASSWORD=your_pass_for_bd
+`DB_PASSWORD=your_pass_for_bd`
 
-DB_HOST=db
+`DB_HOST=db`
 
-DB_PORT=5432
+`DB_PORT=5432`
 
 
 
-POSTGRES_USER=user_for_your_PostgreSQL_bd
+`POSTGRES_USER=user_for_your_PostgreSQL_bd`
 
-POSTGRES_PASSWORD=password
+`POSTGRES_PASSWORD=password`
 
-POSTGRES_DB=name_of_your_database
+`POSTGRES_DB=name_of_your_database`
 
 
 ### 3. Открываете терминал. Нужно проверить установлены ли Docker и Docker-compose.
  3.1 Проверить установлен ли Docker:
    `docker --version`
    Если Docker установлен, то в терминале увидете версию.
-   Если Docker не установлен, то https://google-poisk-vmesto-tebya.ru/?q=%D0%BA%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20Docker
+   Если Docker не установлен, то
+   https://google-poisk-vmesto-tebya.ru/?q=%D0%BA%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20Docker
+   
  3.2 Проверить установлен ли Docker Compose:
    `docker-compose --version`
-   Если Docker Compose не установлен, то https://google-poisk-vmesto-tebya.ru/?q=%D0%BA%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20Docker%20Compose
+   Если Docker Compose не установлен, то
+   https://google-poisk-vmesto-tebya.ru/?q=%D0%BA%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20Docker%20Compose
+   
 
 ### 4. Постройте и запустите контейнеры Docker Compose:
 `docker-compose up --build`
@@ -132,9 +137,11 @@ POSTGRES_DB=name_of_your_database
 `docker-compose exec password_manager_get_post python manage.py migrate`
 
 ### 6. Откройте программу Postman. Выберете отправку POST-запроса
-на адрес `http://localhost:8000/api/password/yundex/`
+на адрес 
+`http://localhost:8000/api/password/yundex/`
 
 перейдите ниже в Body/raw выберите JSON, напишите следующее:
+
 
 `{
     "password": "very_secret_pass"
