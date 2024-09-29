@@ -94,16 +94,25 @@ __________________________________________
 __________________________________________
 
 Далее в файле .env заполняете данные БД, я использовал PostgreSQL.
+
 DB_NAME=name_of_your_bd
+
 DB_USER=your_user_for_bd
+
 DB_PASSWORD=your_pass_for_bd
+
 DB_HOST=db
+
 DB_PORT=5432
 
 
+
 POSTGRES_USER=user_for_your_PostgreSQL_bd
+
 POSTGRES_PASSWORD=password
+
 POSTGRES_DB=name_of_your_database
+
 
 ### 3. Открываете терминал. Нужно проверить установлены ли Docker и Docker-compose.
  3.1 Проверить установлен ли Docker:
