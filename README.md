@@ -9,11 +9,11 @@
 6. Соблюдать единый code-style на протяжении всего проекта
 7. Покрыть код тестами API:
 
-POST /password/{service_name} - создаем пароль/заменяем существующий пароль.
+POST `/password/{service_name}` - создаем пароль/заменяем существующий пароль.
 
-GET /password/{service_name} - получить пароль по имени сервиса.
+GET `/password/{service_name}` - получить пароль по имени сервиса.
 
-GET /password/?service_name={part_of_service_name} - провести поиск по part_of_service_name и выдать пароли с подходящими service_name.
+GET `/password/?service_name={part_of_service_name}` - провести поиск по part_of_service_name и выдать пароли с подходящими service_name.
 
 Пример работы:
 1. Клиент делает запрос на создание пароля.
@@ -30,62 +30,62 @@ content-type: application/json
 
 HTTP/1.1 200 OK
 content-type: application/json
-{
+`{
     "password": "very_secret_pass",
-}
+}`
 
 2. Клиент запрашивает пароль по имени сервиса
 Запрос:
-GET /password/yundex HTTP/1.1
+GET `/password/yundex` HTTP/1.1
 
 Ответ:
 accept: application/json
 HTTP/1.1 200 OK
 content-type: application/json
-{ 
+`{ 
     "password": "very_secret_pass",
     "service_name": "yundex"
-}
+}`
 
 4. Клиент запрашивает пароль по части имени сервиса
 Запрос:
-GET /password/?service_name=yun HTTP/1.1
+GET `/password/?service_name=yun` HTTP/1.1
 Ответ:
 accept: application/json
 HTTP/1.1 200 OK
 content-type: application/json
-[
+`[
 
 { 
     "password": "very_secret_pass",
     "service_name": "yundex"
 }
 
-]
+]`
 
 Всё, что не указано в задании, опционально.
 
 ## Начало работы.
 Инструкция написана для Mac OS. Если у вас другая ОС, ищите команды для своей ОС.
 
-### 0. Создаёте новый проект, в нём создаёте виртуальное окружение командой python -m venv venv
+### 0. Создаёте новый проект, в нём создаёте виртуальное окружение командой `python -m venv venv`
 
-### 1. Клонируйте репозиторий: git clone git@github.com:Pavel-Sokolov-dotcom/password_manager.git
+### 1. Клонируйте репозиторий: `git clone git@github.com:Pavel-Sokolov-dotcom/password_manager.git`
 
 ### 2. Создайте файл .env заполните его своими данными. Образец заполнения:
 `SECRET_KEY = 'ваш секретный ключ для Django'
-DEBUG = True
+`DEBUG = True`
 
-FERNET_KEY=ваш_ключ_для_кодирования_пароля`
+`FERNET_KEY=ваш_ключ_для_кодирования_пароля`
 __________________________________________
 Как сделать FERNET_KEY:
 1) открываете другую IDE, например вы копируете репозиторий на VS Code, открываете PyCharm (или наоборот):
 2) устанавливаете библиотеку cryptography командой `pip install cryptography`
 3) копируете этот код в файл.py
-`from cryptography.fernet import Fernet
+`from cryptography.fernet import Fernet`
 
-key = Fernet.generate_key()
-print(key.decode())`
+`key = Fernet.generate_key()`
+`print(key.decode())`
 
 >>выдаст ключ
 4) копируете ключ, возвращаетесь в ту IDE, в которой у вас файл с переменными окружения (.env)
