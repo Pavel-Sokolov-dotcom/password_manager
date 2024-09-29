@@ -22,9 +22,9 @@ GET `/password/?service_name={part_of_service_name}` - провести поис
 POST `/password/yundex`
 HTTP/1.1
 content-type: application/json
-`{
+```{
     "password": "very_secret_pass"
-}`
+}```
 
 Ответ:
 
