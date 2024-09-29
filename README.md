@@ -80,6 +80,7 @@ __________________________________________
 1) открываете другую IDE, например вы копируете репозиторий на VS Code, открываете PyCharm (или наоборот):
 2) устанавливаете библиотеку cryptography командой `pip install cryptography`
 3) копируете этот код в файл.py
+
 `from cryptography.fernet import Fernet`
 
 `key = Fernet.generate_key()`
