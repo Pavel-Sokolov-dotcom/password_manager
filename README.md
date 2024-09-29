@@ -20,12 +20,14 @@ GET /password/?service_name={part_of_service_name}
 
 Запрос:
 POST /password/yundex HTTP/1.1
+
 content-type: application/json
 {
     "password": "very_secret_pass"
 }
 
 Ответ:
+
 HTTP/1.1 200 OK
 content-type: application/json
 {
@@ -66,7 +68,7 @@ content-type: application/json
 ## Начало работы.
 Инструкция написана для Mac OS. Если у вас другая ОС, ищите команды для своей ОС.
 
-### 0. Создаёте новый проет, в нём создаёте виртуальное окружение командой pyhton -m venv venv
+### 0. Создаёте новый проект, в нём создаёте виртуальное окружение командой python -m venv venv
 
 ### 1. Клонируйте репозиторий: git clone git@github.com:Pavel-Sokolov-dotcom/password_manager.git
 
