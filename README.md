@@ -134,17 +134,13 @@ __________________________________________
    
    Если Docker не установлен, то вам нужно его установить.
    
-   Если не знаете как установить, то:
-   [вот](https://google-poisk-vmesto-tebya.ru/?q=%D0%BA%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20Docker)
+   Если не знаете как установить, то [вот](https://google-poisk-vmesto-tebya.ru/?q=%D0%BA%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20Docker)
    
  3.2 Проверить установлен ли Docker Compose:
    `docker-compose --version`
    Если Docker Compose не установлен, то вам нужно его установить.
    
-   Если не знаете как установить, то вот:
-   
-   https://google-poisk-vmesto-tebya.ru/?q=%D0%BA%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20Docker%20Compose
-   
+   Если не знаете как установить, то [вот](https://google-poisk-vmesto-tebya.ru/?q=%D0%BA%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20Docker%20Compose)
 
 ### 4. Постройте и запустите контейнеры Docker Compose:
 `docker-compose up --build`
