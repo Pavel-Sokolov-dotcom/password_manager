@@ -22,26 +22,33 @@ GET `/password/?service_name={part_of_service_name}` - провести поис
 POST `/password/yundex`
 HTTP/1.1
 content-type: application/json
-{
-    "password": "very_secret_pass"
-}
+
+`{`
+    `"password": "very_secret_pass"`
+}`
 
 Ответ:
 
 HTTP/1.1 200 OK
 content-type: application/json
+
 `{
     "password": "very_secret_pass",
 }`
 
 2. Клиент запрашивает пароль по имени сервиса
 Запрос:
+
 GET `/password/yundex` HTTP/1.1
 
 Ответ:
+
 accept: application/json
+
 HTTP/1.1 200 OK
+
 content-type: application/json
+
 `{ 
     "password": "very_secret_pass",
     "service_name": "yundex"
@@ -49,10 +56,15 @@ content-type: application/json
 
 4. Клиент запрашивает пароль по части имени сервиса
 Запрос:
+
 GET `/password/?service_name=yun` HTTP/1.1
+
 Ответ:
+
 accept: application/json
+
 HTTP/1.1 200 OK
+
 content-type: application/json
 `[
 { 
@@ -119,12 +131,18 @@ __________________________________________
  3.1 Проверить установлен ли Docker:
    `docker --version`
    Если Docker установлен, то в терминале увидете версию.
-   Если Docker не установлен, то
-   https://google-poisk-vmesto-tebya.ru/?q=%D0%BA%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20Docker
+   
+   Если Docker не установлен, то вам нужно его установить.
+   
+   Если не знаете как установить, то:
+   `[вот](https://google-poisk-vmesto-tebya.ru/?q=%D0%BA%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20Docker)`
    
  3.2 Проверить установлен ли Docker Compose:
    `docker-compose --version`
-   Если Docker Compose не установлен, то
+   Если Docker Compose не установлен, то вам нужно его установить.
+   
+   Если не знаете как установить, то вот:
+   
    https://google-poisk-vmesto-tebya.ru/?q=%D0%BA%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20Docker%20Compose
    
 
